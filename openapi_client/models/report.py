@@ -32,40 +32,40 @@ class Report(object):
     """
     openapi_types = {
         'id': 'int',
-        'launched': 'datetime',
-        'servers': 'list[dict]',
+        'title': 'str',
         'status': 'str',
-        'title': 'str'
+        'launched': 'datetime',
+        'servers': 'list[OneOfServermap]'
     }
 
     attribute_map = {
         'id': 'id',
-        'launched': 'launched',
-        'servers': 'servers',
+        'title': 'title',
         'status': 'status',
-        'title': 'title'
+        'launched': 'launched',
+        'servers': 'servers'
     }
 
-    def __init__(self, id=None, launched=None, servers=None, status=None, title=None):  # noqa: E501
+    def __init__(self, id=None, title=None, status=None, launched=None, servers=None):  # noqa: E501
         """Report - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
+        self._title = None
+        self._status = None
         self._launched = None
         self._servers = None
-        self._status = None
-        self._title = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
+        if title is not None:
+            self.title = title
+        if status is not None:
+            self.status = status
         if launched is not None:
             self.launched = launched
         if servers is not None:
             self.servers = servers
-        if status is not None:
-            self.status = status
-        if title is not None:
-            self.title = title
 
     @property
     def id(self):
@@ -87,6 +87,48 @@ class Report(object):
         """
 
         self._id = id
+
+    @property
+    def title(self):
+        """Gets the title of this Report.  # noqa: E501
+
+
+        :return: The title of this Report.  # noqa: E501
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """Sets the title of this Report.
+
+
+        :param title: The title of this Report.  # noqa: E501
+        :type: str
+        """
+
+        self._title = title
+
+    @property
+    def status(self):
+        """Gets the status of this Report.  # noqa: E501
+
+
+        :return: The status of this Report.  # noqa: E501
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """Sets the status of this Report.
+
+
+        :param status: The status of this Report.  # noqa: E501
+        :type: str
+        """
+
+        self._status = status
 
     @property
     def launched(self):
@@ -115,7 +157,7 @@ class Report(object):
 
 
         :return: The servers of this Report.  # noqa: E501
-        :rtype: list[dict]
+        :rtype: list[OneOfServermap]
         """
         return self._servers
 
@@ -125,52 +167,10 @@ class Report(object):
 
 
         :param servers: The servers of this Report.  # noqa: E501
-        :type: list[dict]
+        :type: list[OneOfServermap]
         """
 
         self._servers = servers
-
-    @property
-    def status(self):
-        """Gets the status of this Report.  # noqa: E501
-
-
-        :return: The status of this Report.  # noqa: E501
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """Sets the status of this Report.
-
-
-        :param status: The status of this Report.  # noqa: E501
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def title(self):
-        """Gets the title of this Report.  # noqa: E501
-
-
-        :return: The title of this Report.  # noqa: E501
-        :rtype: str
-        """
-        return self._title
-
-    @title.setter
-    def title(self, title):
-        """Sets the title of this Report.
-
-
-        :param title: The title of this Report.  # noqa: E501
-        :type: str
-        """
-
-        self._title = title
 
     def to_dict(self):
         """Returns the model properties as a dict"""

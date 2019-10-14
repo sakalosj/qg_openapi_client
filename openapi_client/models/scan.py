@@ -32,40 +32,40 @@ class Scan(object):
     """
     openapi_types = {
         'id': 'int',
-        'launched': 'datetime',
-        'servers': 'list[Server]',
         'status': 'str',
-        'title': 'str'
+        'title': 'str',
+        'launched': 'datetime',
+        'servers': 'list[Server]'
     }
 
     attribute_map = {
         'id': 'id',
-        'launched': 'launched',
-        'servers': 'servers',
         'status': 'status',
-        'title': 'title'
+        'title': 'title',
+        'launched': 'launched',
+        'servers': 'servers'
     }
 
-    def __init__(self, id=None, launched=None, servers=None, status=None, title=None):  # noqa: E501
+    def __init__(self, id=None, status=None, title=None, launched=None, servers=None):  # noqa: E501
         """Scan - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
-        self._launched = None
-        self._servers = None
         self._status = None
         self._title = None
+        self._launched = None
+        self._servers = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if launched is not None:
-            self.launched = launched
-        if servers is not None:
-            self.servers = servers
         if status is not None:
             self.status = status
         if title is not None:
             self.title = title
+        if launched is not None:
+            self.launched = launched
+        if servers is not None:
+            self.servers = servers
 
     @property
     def id(self):
@@ -87,48 +87,6 @@ class Scan(object):
         """
 
         self._id = id
-
-    @property
-    def launched(self):
-        """Gets the launched of this Scan.  # noqa: E501
-
-
-        :return: The launched of this Scan.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._launched
-
-    @launched.setter
-    def launched(self, launched):
-        """Sets the launched of this Scan.
-
-
-        :param launched: The launched of this Scan.  # noqa: E501
-        :type: datetime
-        """
-
-        self._launched = launched
-
-    @property
-    def servers(self):
-        """Gets the servers of this Scan.  # noqa: E501
-
-
-        :return: The servers of this Scan.  # noqa: E501
-        :rtype: list[Server]
-        """
-        return self._servers
-
-    @servers.setter
-    def servers(self, servers):
-        """Sets the servers of this Scan.
-
-
-        :param servers: The servers of this Scan.  # noqa: E501
-        :type: list[Server]
-        """
-
-        self._servers = servers
 
     @property
     def status(self):
@@ -171,6 +129,48 @@ class Scan(object):
         """
 
         self._title = title
+
+    @property
+    def launched(self):
+        """Gets the launched of this Scan.  # noqa: E501
+
+
+        :return: The launched of this Scan.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._launched
+
+    @launched.setter
+    def launched(self, launched):
+        """Sets the launched of this Scan.
+
+
+        :param launched: The launched of this Scan.  # noqa: E501
+        :type: datetime
+        """
+
+        self._launched = launched
+
+    @property
+    def servers(self):
+        """Gets the servers of this Scan.  # noqa: E501
+
+
+        :return: The servers of this Scan.  # noqa: E501
+        :rtype: list[Server]
+        """
+        return self._servers
+
+    @servers.setter
+    def servers(self, servers):
+        """Sets the servers of this Scan.
+
+
+        :param servers: The servers of this Scan.  # noqa: E501
+        :type: list[Server]
+        """
+
+        self._servers = servers
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,83 +31,41 @@ class Vulner(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'category': 'int',
-        'patch_qid': 'int',
         'qid': 'int',
+        'patch_qid': 'int',
         'severity': 'str',
-        'title': 'str'
+        'title': 'str',
+        'category': 'int'
     }
 
     attribute_map = {
-        'category': 'category',
-        'patch_qid': 'patch_qid',
         'qid': 'qid',
+        'patch_qid': 'patch_qid',
         'severity': 'severity',
-        'title': 'title'
+        'title': 'title',
+        'category': 'category'
     }
 
-    def __init__(self, category=None, patch_qid=None, qid=None, severity=None, title=None):  # noqa: E501
+    def __init__(self, qid=None, patch_qid=None, severity=None, title=None, category=None):  # noqa: E501
         """Vulner - a model defined in OpenAPI"""  # noqa: E501
 
-        self._category = None
-        self._patch_qid = None
         self._qid = None
+        self._patch_qid = None
         self._severity = None
         self._title = None
+        self._category = None
         self.discriminator = None
 
-        if category is not None:
-            self.category = category
-        if patch_qid is not None:
-            self.patch_qid = patch_qid
         if qid is not None:
             self.qid = qid
+        if patch_qid is not None:
+            self.patch_qid = patch_qid
         if severity is not None:
             self.severity = severity
         if title is not None:
             self.title = title
-
-    @property
-    def category(self):
-        """Gets the category of this Vulner.  # noqa: E501
-
-
-        :return: The category of this Vulner.  # noqa: E501
-        :rtype: int
-        """
-        return self._category
-
-    @category.setter
-    def category(self, category):
-        """Sets the category of this Vulner.
-
-
-        :param category: The category of this Vulner.  # noqa: E501
-        :type: int
-        """
-
-        self._category = category
-
-    @property
-    def patch_qid(self):
-        """Gets the patch_qid of this Vulner.  # noqa: E501
-
-
-        :return: The patch_qid of this Vulner.  # noqa: E501
-        :rtype: int
-        """
-        return self._patch_qid
-
-    @patch_qid.setter
-    def patch_qid(self, patch_qid):
-        """Sets the patch_qid of this Vulner.
-
-
-        :param patch_qid: The patch_qid of this Vulner.  # noqa: E501
-        :type: int
-        """
-
-        self._patch_qid = patch_qid
+        if category is not None:
+            self.category = category
 
     @property
     def qid(self):
@@ -129,6 +87,27 @@ class Vulner(object):
         """
 
         self._qid = qid
+
+    @property
+    def patch_qid(self):
+        """Gets the patch_qid of this Vulner.  # noqa: E501
+
+
+        :return: The patch_qid of this Vulner.  # noqa: E501
+        :rtype: int
+        """
+        return self._patch_qid
+
+    @patch_qid.setter
+    def patch_qid(self, patch_qid):
+        """Sets the patch_qid of this Vulner.
+
+
+        :param patch_qid: The patch_qid of this Vulner.  # noqa: E501
+        :type: int
+        """
+
+        self._patch_qid = patch_qid
 
     @property
     def severity(self):
@@ -171,6 +150,27 @@ class Vulner(object):
         """
 
         self._title = title
+
+    @property
+    def category(self):
+        """Gets the category of this Vulner.  # noqa: E501
+
+
+        :return: The category of this Vulner.  # noqa: E501
+        :rtype: int
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this Vulner.
+
+
+        :param category: The category of this Vulner.  # noqa: E501
+        :type: int
+        """
+
+        self._category = category
 
     def to_dict(self):
         """Returns the model properties as a dict"""
