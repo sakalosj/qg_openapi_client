@@ -1,4 +1,4 @@
-# swagger_client.ScanApi
+# openapi_client.ScanApi
 
 All URIs are relative to *http://localhost:2010/v1*
 
@@ -7,28 +7,30 @@ Method | HTTP request | Description
 [**create_scan**](ScanApi.md#create_scan) | **POST** /scan | Create scan
 [**get_scan**](ScanApi.md#get_scan) | **GET** /scan/{scanId} | Get user by id
 
+
 # **create_scan**
-> create_scan(body=body)
+> create_scan(scan=scan)
 
 Create scan
 
 Create scan
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import openapi_client
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.ScanApi()
-body = swagger_client.Scan() # Scan | Scan data to be created (optional)
+# Create an instance of the API class
+api_instance = openapi_client.ScanApi()
+scan = openapi_client.Scan() # Scan | Scan data to be created (optional)
 
 try:
     # Create scan
-    api_instance.create_scan(body=body)
+    api_instance.create_scan(scan=scan)
 except ApiException as e:
     print("Exception when calling ScanApi->create_scan: %s\n" % e)
 ```
@@ -37,7 +39,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Scan**](Scan.md)| Scan data to be created | [optional] 
+ **scan** | [**Scan**](Scan.md)| Scan data to be created | [optional] 
 
 ### Return type
 
@@ -52,6 +54,11 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | successful operation |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_scan**
@@ -62,16 +69,17 @@ Get user by id
 Get user by id - description
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import openapi_client
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.ScanApi()
-scan_id = 789 # int | ID of scan
+# Create an instance of the API class
+api_instance = openapi_client.ScanApi()
+scan_id = 56 # int | ID of scan
 
 try:
     # Get user by id
@@ -99,6 +107,11 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successfull operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

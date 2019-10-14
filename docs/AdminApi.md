@@ -1,10 +1,11 @@
-# swagger_client.AdminApi
+# openapi_client.AdminApi
 
 All URIs are relative to *http://localhost:2010/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**admin_action**](AdminApi.md#admin_action) | **GET** /admin/{action} | for admin actions
+
 
 # **admin_action**
 > admin_action(action)
@@ -14,15 +15,16 @@ for admin actions
 for admin actions
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import openapi_client
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = swagger_client.AdminApi()
+# Create an instance of the API class
+api_instance = openapi_client.AdminApi()
 action = 'action_example' # str | action to perform
 
 try:
@@ -50,6 +52,11 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successfull operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
