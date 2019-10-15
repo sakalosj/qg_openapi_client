@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **title** | **str** |  | [optional] 
 **status** | **str** |  | [optional] 
 **launched** | **datetime** |  | [optional] 
-**servers** | [**list[OneOfServermap]**](OneOfServermap.md) |  | [optional] 
+**servers** | **list[dict]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

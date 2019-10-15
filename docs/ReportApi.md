@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_report**
-> Report create_report(report=report)
+> InlineResponse200 create_report(report=report)
 
 Create report
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Report**](Report.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_report**
-> InlineResponse200 get_report(report_id)
+> Report get_report(report_id)
 
 Get report by id
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**Report**](Report.md)
 
 ### Authorization
 
