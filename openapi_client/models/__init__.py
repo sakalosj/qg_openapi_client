@@ -14,6 +14,7 @@
 from __future__ import absolute_import
 
 # import models into model package
+from openapi_client.models.inline_response200 import InlineResponse200
 from openapi_client.models.patch import Patch
 from openapi_client.models.report import Report
 from openapi_client.models.scan import Scan

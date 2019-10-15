@@ -81,6 +81,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [InlineResponse200](docs/InlineResponse200.md)
  - [Patch](docs/Patch.md)
  - [Report](docs/Report.md)
  - [Scan](docs/Scan.md)

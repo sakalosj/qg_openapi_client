@@ -30,6 +30,7 @@ from openapi_client.exceptions import ApiValueError
 from openapi_client.exceptions import ApiKeyError
 from openapi_client.exceptions import ApiException
 # import models into sdk package
+from openapi_client.models.inline_response200 import InlineResponse200
 from openapi_client.models.patch import Patch
 from openapi_client.models.report import Report
 from openapi_client.models.scan import Scan
