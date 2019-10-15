@@ -31,7 +31,7 @@ class InlineResponse200(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'Int',
+        'id': 'int',
         'status': 'str'
     }
 
@@ -58,7 +58,7 @@ class InlineResponse200(object):
 
 
         :return: The id of this InlineResponse200.  # noqa: E501
-        :rtype: Int
+        :rtype: int
         """
         return self._id
 
@@ -68,7 +68,7 @@ class InlineResponse200(object):
 
 
         :param id: The id of this InlineResponse200.  # noqa: E501
-        :type: Int
+        :type: int
         """
 
         self._id = id
