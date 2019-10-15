@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost:2010/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_scan**](ScanApi.md#create_scan) | **POST** /scan | Create scan
-[**get_scan**](ScanApi.md#get_scan) | **GET** /scan/{scanId} | Get user by id
+[**get_scan**](ScanApi.md#get_scan) | **GET** /scan/{scan_id} | Get user by id
 
 
 # **create_scan**

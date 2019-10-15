@@ -74,9 +74,9 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AdminApi* | [**admin_action**](docs/AdminApi.md#admin_action) | **GET** /admin/{action} | for admin actions
 *ReportApi* | [**create_report**](docs/ReportApi.md#create_report) | **POST** /report | Create report
-*ReportApi* | [**get_report**](docs/ReportApi.md#get_report) | **GET** /report/{reportId} | Get report by id
+*ReportApi* | [**get_report**](docs/ReportApi.md#get_report) | **GET** /report/{report_id} | Get report by id
 *ScanApi* | [**create_scan**](docs/ScanApi.md#create_scan) | **POST** /scan | Create scan
-*ScanApi* | [**get_scan**](docs/ScanApi.md#get_scan) | **GET** /scan/{scanId} | Get user by id
+*ScanApi* | [**get_scan**](docs/ScanApi.md#get_scan) | **GET** /scan/{scan_id} | Get user by id
 
 
 ## Documentation For Models

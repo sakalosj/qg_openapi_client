@@ -5,11 +5,11 @@ All URIs are relative to *http://localhost:2010/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_report**](ReportApi.md#create_report) | **POST** /report | Create report
-[**get_report**](ReportApi.md#get_report) | **GET** /report/{reportId} | Get report by id
+[**get_report**](ReportApi.md#get_report) | **GET** /report/{report_id} | Get report by id
 
 
 # **create_report**
-> create_report(report=report)
+> Report create_report(report=report)
 
 Create report
 
@@ -30,7 +30,8 @@ report = openapi_client.Report() # Report | Data for report genration (optional)
 
 try:
     # Create report
-    api_instance.create_report(report=report)
+    api_response = api_instance.create_report(report=report)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReportApi->create_report: %s\n" % e)
 ```
@@ -43,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Report**](Report.md)
 
 ### Authorization
 
@@ -52,11 +53,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** | successfull operation |  -  |
 **0** | successfull operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -215,7 +215,7 @@ class ScanApi(object):
 
         path_params = {}
         if 'scan_id' in local_var_params:
-            path_params['scanId'] = local_var_params['scan_id']  # noqa: E501
+            path_params['scan_id'] = local_var_params['scan_id']  # noqa: E501
 
         query_params = []
 
@@ -233,7 +233,7 @@ class ScanApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/scan/{scanId}', 'GET',
+            '/scan/{scan_id}', 'GET',
             path_params,
             query_params,
             header_params,
