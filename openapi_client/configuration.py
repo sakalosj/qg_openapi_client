@@ -289,6 +289,10 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
             {
                 'url': "http://localhost:2010/v1",
                 'description': "No description provided",
+            },
+            {
+                'url': "http://localhost:8080/v1",
+                'description': "No description provided",
             }
         ]
 
