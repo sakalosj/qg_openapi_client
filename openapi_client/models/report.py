@@ -35,7 +35,7 @@ class Report(object):
         'title': 'str',
         'status': 'str',
         'launched': 'datetime',
-        'servers': 'list[dict]'
+        'servers': 'list[OneOfServermap]'
     }
 
     attribute_map = {
@@ -157,7 +157,7 @@ class Report(object):
 
 
         :return: The servers of this Report.  # noqa: E501
-        :rtype: list[dict]
+        :rtype: list[OneOfServermap]
         """
         return self._servers
 
@@ -167,7 +167,7 @@ class Report(object):
 
 
         :param servers: The servers of this Report.  # noqa: E501
-        :type: list[dict]
+        :type: list[OneOfServermap]
         """
 
         self._servers = servers
